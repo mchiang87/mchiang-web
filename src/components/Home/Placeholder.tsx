@@ -4,11 +4,6 @@ import { withStyles } from '@material-ui/core';
 import { PlaceholderJSS } from './Placeholder.jss';
 import { PlaceholderProps } from './Placeholder.types';
 
-/**
- * "Dumb" Home component
- *
- * @param props - The Home component's passed in props.
- */
 const Component = (props: PlaceholderProps): JSX.Element => {
   const { classes } = props;
 
