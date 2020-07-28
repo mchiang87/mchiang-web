@@ -1,0 +1,127 @@
+{
+    "plugins": [
+      "jsx-a11y",
+      "@typescript-eslint/eslint-plugin",
+      "eslint-plugin-tsdoc",
+      "jest",
+      "jest-dom",
+      "testing-library"
+    ],
+    "extends": [
+    //   "react-app",
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "plugin:jest/recommended",
+      "plugin:jest/style",
+      "plugin:jest-dom/recommended",
+      "plugin:testing-library/react"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "jest-dom/prefer-empty": 0,
+      "import/no-cycle": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/prefer-default-export": 0,
+      "tsdoc/syntax": "warn",
+      "max-len": 0,
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          "allowExpressions": true,
+          "allowTypedFunctionExpressions": true,
+          "allowHigherOrderFunctions": true,
+          "allowConciseArrowFunctionExpressionsStartingWithVoid": false
+        }
+      ],
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "info",
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1,
+          "maxBOF": 0,
+          "maxEOF": 1
+        }
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectExpression": {
+            "multiline": true,
+            "minProperties": 2,
+            "consistent": true
+          },
+          "ObjectPattern": {
+            "multiline": true,
+            "minProperties": 2,
+            "consistent": true
+          },
+          "ImportDeclaration": {
+            "multiline": false,
+            "minProperties": 2,
+            "consistent": true
+          },
+          "ExportDeclaration": {
+            "multiline": true,
+            "minProperties": 2,
+            "consistent": true
+          }
+        }
+      ],
+      "no-plusplus": [
+        "error",
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ],
+      "react/jsx-props-no-spreading": 0,
+      "react/jsx-no-duplicate-props": [
+        1,
+        {
+          "ignoreCase": false
+        }
+      ],
+      "i18next/no-literal-string": 0
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/**/*.jss.ts?(x)"
+        ],
+        "rules": {
+          "@typescript-eslint/explicit-function-return-type": 0
+        }
+      }
+    ],
+    "settings": {
+      "import/resolver": {
+        "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+      },
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
