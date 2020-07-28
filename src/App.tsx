@@ -1,6 +1,6 @@
 import React from 'react';
-import { Placeholder } from 'components/Home';
+import { Routes } from 'components/Routes';
 
 export const App = (): JSX.Element => (
-  <Placeholder />
+  <Routes />
 );

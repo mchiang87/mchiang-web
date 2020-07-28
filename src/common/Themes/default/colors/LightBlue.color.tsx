@@ -1,0 +1,16 @@
+export const lightBlue = {
+  50: '#F1F7FC',
+  100: '#DDEBF7',
+  200: '#C6DDF2',
+  300: '#AFCFED',
+  400: '#9EC5E9',
+  500: '#8DBBE5',
+  600: '#85B5E2',
+  700: '#7AACDE',
+  800: '#70A4DA',
+  900: '#5D96D3',
+  A100: '#FFFFFF',
+  A200: '#FFFFFF',
+  A400: '#D6E9FF',
+  A700: '#BDDCFF',
+};
