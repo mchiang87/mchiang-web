@@ -1,3 +1,3 @@
-export * from './Placeholder';
-export * from './Placeholder.types';
-export * from './Placeholder.jss';
+export * from './Home';
+export * from './Home.types';
+export * from './Home.jss';

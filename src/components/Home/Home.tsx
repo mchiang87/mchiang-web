@@ -1,10 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
 
-import { PlaceholderJSS } from './Placeholder.jss';
-import { PlaceholderProps } from './Placeholder.types';
+import { HomeJSS } from './Home.jss';
+import { HomeProps } from './Home.types';
 
-const Component = (props: PlaceholderProps): JSX.Element => {
+const Component = (props: HomeProps): JSX.Element => {
   const { classes } = props;
 
   return (
@@ -18,4 +18,4 @@ const Component = (props: PlaceholderProps): JSX.Element => {
   );
 };
 
-export const Placeholder = withStyles(PlaceholderJSS)(Component);
+export const HomeComponent = withStyles(HomeJSS)(Component);

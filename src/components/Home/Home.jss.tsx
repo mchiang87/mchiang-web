@@ -1,6 +1,6 @@
 import { createStyles } from '@material-ui/core/styles';
 
-export const PlaceholderJSS = createStyles({
+export const HomeJSS = createStyles({
   header: {
     backgroundColor: 'black',
     color: 'white',
