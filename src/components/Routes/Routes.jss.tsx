@@ -15,4 +15,7 @@ export const RoutesJSS = makeStyles((theme: Theme) => createStyles({
     flex: '1',
     overflow: 'auto',
   },
+  navigation: {
+
+  },
 }));

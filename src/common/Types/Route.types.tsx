@@ -4,4 +4,7 @@ export interface RouteParams {
 
 export enum RoutePath {
   root = '/',
+  resume = '/resume',
+  projects = '/projects',
+  contact = '/contact',
 }
