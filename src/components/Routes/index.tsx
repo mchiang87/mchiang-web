@@ -1,2 +1,2 @@
 export * from './Routes.jss';
-export * from './Routes';
+export * from './Routes.component';

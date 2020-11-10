@@ -7,6 +7,10 @@ import { AppWrapper } from 'common/AppWrapper';
 import { App } from './App';
 import * as serviceWorker from './serviceWorker';
 
+window.loadPromise = new Promise((resolve) => {
+  window.addEventListener('DOMContentLoaded', resolve);
+});
+
 ReactDOM.render(
   <AppWrapper>
     <App />
