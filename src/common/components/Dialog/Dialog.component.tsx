@@ -34,6 +34,7 @@ export const Dialog = (props: DialogProps): JSX.Element => {
     >
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>
+        asdf
         <DialogContentText>{content}</DialogContentText>
       </DialogContent>
       <DialogActions>
