@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Canvas } from '../../common/WebGL/Canvas.component';
+import { Canvas } from '../../common/components/WebGL/Canvas.component';
 
 import { ResumeJSS } from './Resume.jss';
 

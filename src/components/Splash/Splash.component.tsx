@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
 
-import { Canvas } from '../../common/WebGL/Canvas.component';
+import { Canvas } from '../../common/components/WebGL/Canvas.component';
 // import { Background } from '../../common/Backgrounds/Background.component';
 // import { images } from '../../images/images';
 

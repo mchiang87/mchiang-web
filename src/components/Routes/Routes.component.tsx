@@ -12,7 +12,7 @@ import {
 import {
   play,
   exit,
-} from 'common/Timelines/timelines';
+} from 'common/components/Timelines/timelines';
 import { RoutePath } from 'common/Types';
 
 import { NavigationComponent } from 'components/Navigation';

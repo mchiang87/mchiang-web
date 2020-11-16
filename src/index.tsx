@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { AppWrapper } from 'common/AppWrapper';
+import { AppWrapper } from 'common/components/AppWrapper';
 
 import { App } from './App';
 import * as serviceWorker from './serviceWorker';
