@@ -44,6 +44,7 @@ export const RoutesComponent = (): JSX.Element => (
                 enter: 750,
                 exit: 150,
               }}
+              exit={false}
             >
               <Switch location={location}>
                 <Route exact path={RoutePath.root} component={HomeComponent} />

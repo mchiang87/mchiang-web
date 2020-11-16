@@ -4,7 +4,7 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 
-export const HomeJSS = makeStyles((theme: Theme) => createStyles({
+export const ProjectsJSS = makeStyles((theme: Theme) => createStyles({
   header: {
     backgroundColor: theme.palette.background.default,
     color: 'black',

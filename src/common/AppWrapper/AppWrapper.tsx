@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { ThemeProvider } from '@material-ui/styles';
 import { createDefaultTheme } from 'common/Themes/Theme.default';
 
@@ -11,9 +12,11 @@ export const AppWrapper = (props: AppWrapperProps): JSX.Element => {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Router>
-        {children}
-      </Router>
+      <ParallaxProvider>
+        <Router>
+          {children}
+        </Router>
+      </ParallaxProvider>
     </ThemeProvider>
   );
 };

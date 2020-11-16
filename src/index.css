@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+  background: rgb(100, 67, 43);
+  /* background: red url('http://media.gettyimages.com/photos/groningen-city-view- picture-id588880579?s=612x612') no-repeat center; */
+  background-size:contain;
+ }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

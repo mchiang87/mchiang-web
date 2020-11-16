@@ -1,30 +1,34 @@
 import {
+  gsap,
   TimelineMax as Timeline,
-  Power1,
+  // Power1,
 } from 'gsap';
 
 const getDefaultTimeline = (node: HTMLElement, delay: number): Timeline => {
-  const timeline = new Timeline({ paused: true });
+  const timeline = gsap.timeline({ paused: true });
   const content = node.querySelector('.content');
   const contentInner = node.querySelector('.content--inner');
 
   if (node && content && contentInner) {
     timeline
-      .from(node, 0.3, {
+      .from(node, {
+        duration: 0.3,
         display: 'none',
         autoAlpha: 0,
         delay,
-        ease: Power1.easeIn,
+        ease: 'power1.in',
       })
-      .from(content, 0.15, {
+      .from(content, {
+        duration: 0.15,
         autoAlpha: 0,
         y: 25,
-        ease: Power1.easeInOut,
+        ease: 'power1.inOut',
       })
-      .from(contentInner, 0.15, {
+      .from(contentInner, {
+        duration: 0.15,
         autoAlpha: 0,
         delay: 0.15,
-        ease: Power1.easeIn,
+        ease: 'power1.in',
       });
   }
 
@@ -32,20 +36,23 @@ const getDefaultTimeline = (node: HTMLElement, delay: number): Timeline => {
 };
 
 const getHomeTimeline = (node: HTMLElement, delay: number): Timeline => {
-  const timeline = new Timeline({ paused: true });
+  const timeline = gsap.timeline({ paused: true });
   const texts = node.querySelectorAll('h1 > div');
 
   timeline
-    .from(node, 0, {
+    .from(node, {
+      duration: 0,
       display: 'none',
       autoAlpha: 0,
       delay,
     })
-    .from(texts, 0.375, {
+    .from(texts, {
+      duration: 0.4,
       autoAlpha: 0,
       x: -25,
-      ease: Power1.easeOut,
-    }, 0.125);
+      ease: 'power1.out',
+      stagger: 0.125,
+    });
 
   return timeline;
 };
@@ -60,20 +67,18 @@ export const play = (pathname: string, node: HTMLElement, appears: boolean): voi
     timeline = getDefaultTimeline(node, delay);
   }
 
-  // const loaded = window.loadPromise();
-  // await requestAnimationFrame(() => timeline.play());
-  window
-    .loadPromise
+  window.loadPromise
     .then(() => requestAnimationFrame(() => timeline.play()))
     .catch(() => 'err');
 };
 
 export const exit = (node: HTMLElement): void => {
-  const timeline = new Timeline({ paused: true });
+  const timeline = gsap.timeline({ paused: true });
 
-  timeline.to(node, 0.15, {
+  timeline.to(node, {
+    duration: 10.15,
     autoAlpha: 0,
-    ease: Power1.easeOut,
+    ease: 'power1.out',
   });
   timeline.play();
 };

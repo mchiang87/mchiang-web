@@ -34,6 +34,6 @@ export const basePalette = {
     contrastText: lightBlue[100],
   },
   background: {
-    default: lightBlue[50],
+    default: secondary[800],
   },
 };
