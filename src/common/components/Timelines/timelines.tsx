@@ -37,7 +37,8 @@ const getDefaultTimeline = (node: HTMLElement, delay: number): Timeline => {
 
 const getHomeTimeline = (node: HTMLElement, delay: number): Timeline => {
   const timeline = gsap.timeline({ paused: true });
-  const texts = node.querySelectorAll('h1 > div');
+  const infoBox = node.querySelector('.infoBox');
+  // const texts = node.querySelectorAll('h1 > div');
 
   timeline
     .from(node, {
@@ -46,10 +47,10 @@ const getHomeTimeline = (node: HTMLElement, delay: number): Timeline => {
       autoAlpha: 0,
       delay,
     })
-    .from(texts, {
+    .from(infoBox, {
       duration: 0.4,
       autoAlpha: 0,
-      x: -25,
+      x: -1000,
       ease: 'power1.out',
       stagger: 0.125,
     });
